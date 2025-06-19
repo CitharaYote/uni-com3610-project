@@ -10,7 +10,7 @@
 
 // Asset Imports
 
-export type TM_FILENAME_BASEProps = {
+export type FooterProps = {
   className?: string;
 };
 
@@ -18,7 +18,7 @@ export type TM_FILENAME_BASEProps = {
  * Footer renders a React component.
  * @param {string} className - The class name to apply to the component.
  */
-const Footer = (p: TM_FILENAME_BASEProps) => {
+const Footer = (p: FooterProps) => {
   return (
     <div className={`${p.className}`}>
       <p>Footer</p>

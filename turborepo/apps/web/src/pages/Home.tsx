@@ -3,6 +3,7 @@
  * @author Theo Cruddace
  */
 
+import { useState } from "react";
 import PageSkeleton from "../utils/PageSkeleton";
 
 // Package Imports
@@ -15,7 +16,9 @@ import PageSkeleton from "../utils/PageSkeleton";
  * Home renders a React page.
  */
 const Home: React.FC = () => {
-  return <PageSkeleton>Home</PageSkeleton>;
+  // TODO: add role/auth protection to subcategories
+
+  return <PageSkeleton>yeet</PageSkeleton>;
 };
 
 export default Home;

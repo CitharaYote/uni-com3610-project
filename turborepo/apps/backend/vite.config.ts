@@ -3,15 +3,19 @@ import { VitePluginNode } from "vite-plugin-node";
 
 export default defineConfig({
   server: {
-    port: 3000,
+    port: parseInt(process.env.BACKEND_PORT!),
   },
   plugins: [
     ...VitePluginNode({
       adapter: "express",
-      appPath: "./src/app.ts",
-      exportName: "viteNodeApp",
+      appPath: "./src/index.ts",
+      exportName: "backend",
       tsCompiler: "esbuild",
       swcOptions: {},
+      initAppOnBoot: true,
     }),
   ],
+  build: {
+    commonjsOptions: { transformMixedEsModules: true }, // Change
+  },
 });
